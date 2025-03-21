@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienvenido al Club Cafetería</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body class="bg-light">
+
+    <!-- Barra de Navegación -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="{{ url_for('index') }}">Club Cafetería</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-toggle="dropdown">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="{{ url_for('login') }}">Iniciar Sesión</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ url_for('register') }}">Registrarse</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contenido Principal -->
+    <div class="container text-center mt-5">
+        <div class="card shadow p-4">
+            <h1 class="text-primary">Bienvenido a la Cafetería</h1>
+            <p class="lead">Un espacio para disfrutar de café, snacks y compartir un buen rato.</p>
+            <img src="{{ url_for('static', filename='cafeteria.jpg') }}" class="img-fluid rounded mt-3 mb-4" alt="Club Cafetería">
+            <p>Esta aplicación esta diseñada para que cada miembro pueda llevar a cabo un seguimiento de sus gastos e ingresos.</p>
+
+            <div class="mt-4">
+                <a href="{{ url_for('login') }}" class="btn btn-primary btn-lg">Iniciar Sesión</a>
+                <a href="{{ url_for('register') }}" class="btn btn-success btn-lg">Registrarse</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
