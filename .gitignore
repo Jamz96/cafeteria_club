@@ -1,0 +1,10 @@
+# Ignorar credenciales sensibles
+credentials.json
+
+# Ignorar las migraciones de Flask-Migrate (opcional)
+migrations/
+
+# Archivos de Python (caché, etc.)
+__pycache__/
+*.pyc
+*.pyo
